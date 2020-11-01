@@ -48,6 +48,20 @@ export const todoReducer = (state = initialState, action: TodoActions) => {
           ...state.todoList.filter((el) => el.id !== action.payload.id),
         ],
       };
+
+    case todoActionsType.edit:
+      return {
+        ...state,
+        todoList: state.todoList.map((todo) =>
+          todo.id === action.payload.id
+            ? {
+                ...todo,
+                name: action.payload.name,
+              }
+            : todo
+        ),
+      };
+
     default:
       return state;
   }

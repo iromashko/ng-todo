@@ -4,6 +4,7 @@ export enum todoActionsType {
   create = '[TODO] create item',
   delete = '[TODO] delete item',
   toggle = '[TODO] toggle item',
+  edit = '[TODO] edit item',
 }
 
 export class TodoCreateAction implements Action {
@@ -20,8 +21,13 @@ export class TodoToggleAction implements Action {
   readonly type = todoActionsType.toggle;
   constructor(public payload: { id: number }) {}
 }
+export class TodoEditAction implements Action {
+  readonly type = todoActionsType.edit;
+  constructor(public payload: { id: number; name: string }) {}
+}
 
 export type TodoActions =
   | TodoCreateAction
   | TodoDeleteAction
-  | TodoToggleAction;
+  | TodoToggleAction
+  | TodoEditAction;

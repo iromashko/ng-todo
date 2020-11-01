@@ -9,6 +9,7 @@ import { TodoCreateFormUiComponent } from './ui/todo-create-form-ui/todo-create-
 import { FormsModule } from '@angular/forms';
 import { TodoListUiComponent } from './ui/todo-list-ui/todo-list-ui.component';
 import { TodoListItemComponent } from './ui/todo-list-item/todo-list-item.component';
+import { TodoListItemEditComponent } from './ui/todo-list-item-edit/todo-list-item-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TodoListItemComponent } from './ui/todo-list-item/todo-list-item.compon
     TodoCreateFormUiComponent,
     TodoListUiComponent,
     TodoListItemComponent,
+    TodoListItemEditComponent,
   ],
   imports: [
     CommonModule,

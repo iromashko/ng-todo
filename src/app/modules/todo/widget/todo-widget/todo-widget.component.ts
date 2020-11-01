@@ -5,6 +5,7 @@ import { Todo } from '../../model/todo';
 import {
   TodoCreateAction,
   TodoDeleteAction,
+  TodoEditAction,
   TodoToggleAction,
 } from '../../store/todo.actions';
 import { TodoState } from '../../store/todo.reducer';
@@ -32,5 +33,8 @@ export class TodoWidgetComponent implements OnInit {
   }
   onToggle(id: number): void {
     this.store$.dispatch(new TodoToggleAction({ id }));
+  }
+  onEdit({ id, name }): void {
+    this.store$.dispatch(new TodoEditAction({ id, name }));
   }
 }
