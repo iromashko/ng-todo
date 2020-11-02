@@ -32,6 +32,7 @@ export class TodoListUiComponent implements OnInit {
     this.toggle.emit(id);
   }
   onEdit(name: string, id: number): void {
+    this.editIds = this.editIds.filter((item) => item !== id);
     this.edit.emit({ id, name });
   }
   onEditMode(id: number): void {

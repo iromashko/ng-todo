@@ -31,5 +31,6 @@ import { TodoListItemEditComponent } from './ui/todo-list-item-edit/todo-list-it
     StoreModule.forFeature(TODO_REDUCER_NODE, todoReducer),
     FormsModule,
   ],
+  exports: [TodoWidgetComponent],
 })
 export class TodoModule {}
