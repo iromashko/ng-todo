@@ -28,6 +28,7 @@ export class TodoListItemComponent implements OnInit {
   }
   onToggle(event): void {
     event.preventDefault();
+    this.toggle.emit();
   }
   onEdit(): void {
     this.edit.emit();
